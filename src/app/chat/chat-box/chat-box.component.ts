@@ -15,7 +15,7 @@ import { Cookie } from 'ng2-cookies/ng2-cookies';
 })
 export class ChatBoxComponent implements OnInit {
 
-  @ViewChild('scrollMe', { read: static }) 
+  @ViewChild('scrollMe', { static:false}) read: ElementRef  
   
   public scrollMe: ElementRef;
 
@@ -205,7 +205,7 @@ export class ChatBoxComponent implements OnInit {
     }
 
 
-    this.SocketService.markChatAsSeen(chatDetails);
+    /*this.SocketService.markChatAsSeen(chatDetails);*/
 
     this.getPreviousChatWithAUser();
 

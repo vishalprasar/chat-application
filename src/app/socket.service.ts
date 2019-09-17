@@ -133,5 +133,13 @@ export class SocketService {
 
   } // end getChatMessage
 
+  public exitSocket = () =>{
+
+
+    this.socket.disconnect();
+
+
+  }// end exit socket
+
 
 }

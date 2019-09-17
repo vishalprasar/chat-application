@@ -41,4 +41,14 @@ public getUserInfoInLocalStorage = () =>{
 
     return this.http.post(`${this.url}/api/v1/users/login`,params);
   }
+
+  public logout(): Observable<any> {
+
+    const params = new HttpParams()
+      .set('authToken', Cookie.get('authtoken'))
+
+    return this.http.post(`${this.url}/api/v1/users/logout`, params);
+
+  } // end logout function
+
 }
